@@ -1,0 +1,62 @@
+// -*- tab-width: 4; Mode: C++; c-basic-offset: 4; indent-tabs-mode: nil -*-
+
+// This file is just a placeholder for your configuration file.  If
+// you wish to change any of the setup parameters from their default
+// values, place the appropriate #define statements here.
+
+
+// the following 2 defines control which APM board you have. The
+// 'BETA' board is only if you are developer who received a
+// pre-release APM2 board with the older barometer on it.
+
+// # define CONFIG_APM_HARDWARE APM_HARDWARE_APM2
+// # define APM2_BETA_HARDWARE
+
+
+// The following are the recommended settings for Xplane
+// simulation. Remove the leading "/* and trailing "*/" to enable:
+
+// #define HIL_MODE            HIL_MODE_DISABLED
+
+/*
+// HIL_MODE SELECTION
+//
+// Mavlink supports
+// 1. HIL_MODE_ATTITUDE : simulated position, airspeed, and attitude
+// 2. HIL_MODE_SENSORS: full sensor simulation
+//#define HIL_MODE            HIL_MODE_ATTITUDE
+
+*/
+
+// use this to enable the new MAVLink 1.0 protocol, instead of the
+// older 0.9 protocol
+// #define MAVLINK10 ENABLED
+//=========================================
+#define CONFIG_APM_HARDWARE APM_HARDWARE_APM1
+
+#define FLIGHT_MODE_CHANNEL	8
+#define FLIGHT_MODE_1		AUTO
+#define FLIGHT_MODE_2		AUTO
+#define FLIGHT_MODE_3		AUTO
+#define FLIGHT_MODE_4       STABILIZE
+#define FLIGHT_MODE_5       MANUAL
+#define FLIGHT_MODE_6       MANUAL
+
+#define HIL_PROTOCOL        HIL_PROTOCOL_MAVLINK
+
+#define HIL_MODE            HIL_MODE_DISABLED
+
+#define HIL_PORT            0
+
+#define LOGGING_ENABLED DISABLED
+#define CLI_ENABLED ENABLED
+#define CONFIG_ADC  ENABLED
+#define GPS_PROTOCOL 	GPS_PROTOCOL_MTK16
+
+# define GCS_PROTOCOL        GCS_PROTOCOL_MAVLINK
+# define GCS_PORT            3
+
+#define AIRSPEED_SENSOR     ENABLED
+#define MAGNETOMETER        ENABLED
+#define AIRSPEED_CRUISE     25
+#define THROTTLE_FAILSAFE   ENABLED
